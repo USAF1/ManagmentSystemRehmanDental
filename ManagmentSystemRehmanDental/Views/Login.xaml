@@ -5,15 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ManagmentSystemRehmanDental.Views"
         mc:Ignorable="d"
-        Title="Login" Height="500" Width="600">
+        Title="Login" Height="500" Width="600" ResizeMode="NoResize">
     <Grid x:Name="Login1" Width="600" Height="500" Background="#FFF1F1F1" Margin="0,-4,0,-12">
-        <Label x:Name="label" Content="Welcome To Rehman Dental Managment System" HorizontalAlignment="Center" Margin="0,66,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontFamily="Arial Rounded MT Bold"/>
-        <Label x:Name="label1" Content="Login" HorizontalAlignment="Center" Margin="0,106,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Arial Rounded MT Bold"/>
-        <TextBox x:Name="txt_UserName" HorizontalAlignment="Center"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="272" Height="40" FontSize="14" FontFamily="Arial Rounded MT Bold" Background="#FFFCFCFC" BorderBrush="#FF0A0A0A" Margin="0,189,0,0"  />
-        <Label x:Name="label2" Content="User Name:" HorizontalAlignment="Left" Margin="164,151,0,0" VerticalAlignment="Top" FontSize="12" FontWeight="Normal" FontFamily="Arial Rounded MT Bold"/>
-        <Label x:Name="label2_Copy" Content="Password:&#xD;&#xA;" HorizontalAlignment="Left" Margin="164,270,0,0" VerticalAlignment="Top" FontSize="12" FontWeight="Normal" FontFamily="Arial Rounded MT Bold"/>
-        <Button x:Name="Btn_Login" Content="Login" HorizontalAlignment="Center" Margin="0,387,0,0" VerticalAlignment="Top" Width="216" Height="38" FontFamily="Arial Rounded MT Bold" FontSize="14" FontWeight="Bold" Background="#FF0AB2B2" BorderBrush="#FFC5E45D" Foreground="White"/>
-        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Center" Margin="0,307,0,0" VerticalAlignment="Top" Width="272" Height="40" Background="#FFFCFCFC" BorderBrush="Black"/>
+        <Label x:Name="label" Content="Welcome To Rehman Dental Managment System" HorizontalAlignment="Center" Margin="0,39,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontFamily="Arial Rounded MT Bold"/>
+        <Label x:Name="label1" Content="Login" HorizontalAlignment="Center" Margin="0,84,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Arial Rounded MT Bold"/>
+        <Border BorderBrush="#FFB2B2B2" BorderThickness="1,1,1,1" CornerRadius="10,10,10,10" Margin="145,128,145,62" Width="310" Height="310" Background="White">
+            <Border.Effect>
+                <DropShadowEffect
+      ShadowDepth="15"
+      Direction="237"
+      Color="#4a4a4a"
+      Opacity="0.2"
+      BlurRadius="1" />
+            </Border.Effect>
 
+            <Grid Background="#FFFFFEFE" Margin="9,9,11,14"  >
+
+                <TextBox x:Name="txt_UserName" HorizontalAlignment="Left"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="236" Height="30" FontSize="14" FontFamily="Arial Rounded MT Bold" Background="#FFFCFCFC" BorderBrush="#FF0A0A0A" Margin="26,66,0,0"  />
+                <Label x:Name="label2" Content="User Name:" HorizontalAlignment="Left" Margin="26,33,0,0" VerticalAlignment="Top" FontSize="12" FontWeight="Normal" FontFamily="Arial Rounded MT Bold"/>
+                <Label x:Name="label2_Copy" Content="Password:&#xD;&#xA;" HorizontalAlignment="Left" Margin="30,120,0,0" VerticalAlignment="Top" FontSize="12" FontWeight="Normal" FontFamily="Arial Rounded MT Bold"/>
+                <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="26,163,0,0" VerticalAlignment="Top" Width="236" Height="32" Background="#FFFCFCFC" BorderBrush="Black"/>
+                <Button x:Name="Btn_Login" Content="Login" HorizontalAlignment="Left" Margin="45,234,0,0" VerticalAlignment="Top" Width="201" Height="38" FontFamily="Arial Rounded MT Bold" FontSize="14" FontWeight="Bold" Background="#FF0AB2B2" BorderBrush="#FFC5E45D" Foreground="White">
+                    <Button.FocusVisualStyle>
+                        <Style/>
+                    </Button.FocusVisualStyle>
+                </Button>
+            </Grid>
+        </Border>
     </Grid>
 </Window>
