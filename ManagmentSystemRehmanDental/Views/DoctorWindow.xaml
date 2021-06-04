@@ -1,0 +1,76 @@
+﻿<Window x:Class="ManagmentSystemRehmanDental.Views.DoctorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ManagmentSystemRehmanDental.Views"
+        mc:Ignorable="d"
+        Title="DoctorWindow" Height="600" Width="1200" ResizeMode="NoResize">
+    <Grid Background="#FF2E2E2E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel Grid.Column="1" LastChildFill="False" Grid.Row="1" Width="500" Height="540" HorizontalAlignment="Left" VerticalAlignment="Center" Background="White" Grid.RowSpan="5">
+            <DockPanel LastChildFill="False" Background="AliceBlue" DockPanel.Dock="Top" Height="100">
+                <Label x:Name="label" Content="Search Patient" Height="25" DockPanel.Dock="Top" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" FontWeight="Bold"/>
+                <Label x:Name="label1" Content="Patient Id:" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" Margin="10,0,0,0" DockPanel.Dock="Left"/>
+                <TextBox x:Name="Txt_Search" Text="" PreviewTextInput="NumberValidationTextBox" TextWrapping="Wrap" Width="200" Height="25" HorizontalAlignment="Left" VerticalAlignment="Center" DockPanel.Dock="Left" Margin="10,0,0,0"/>
+                <Button x:Name="button" Content="Search" Width="150" Height="25" DockPanel.Dock="Left" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0" Background="#FF5996F7" FontWeight="Bold" Click="button_Click"/>
+
+            </DockPanel>
+            <Grid Width="300" Height="350" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="70,0,0,0" Background="#FFF1F1F1">
+                <Label x:Name="label2" Content="Patient Details" HorizontalAlignment="Center" Margin="0,26,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Arial Rounded MT Bold"/>
+                <Label x:Name="label3" Content="Name:" HorizontalAlignment="Left" Margin="43,87,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <TextBox x:Name="Txt_Name" HorizontalAlignment="Left" Margin="109,90,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" Height="25" IsReadOnly="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+                <Label x:Name="label4" Content="Age:" HorizontalAlignment="Left" Margin="43,142,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <TextBox x:Name="Txt_Age" HorizontalAlignment="Left" Margin="109,145,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" Height="25" IsReadOnly="True" VerticalContentAlignment="Center"/>
+                <Label x:Name="label5" Content="Gender:" HorizontalAlignment="Left" Margin="35,206,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <TextBox x:Name="Txt_Gender" HorizontalAlignment="Left" Margin="109,208,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" IsReadOnly="True" Height="25" VerticalContentAlignment="Center"/>
+                <Label x:Name="label6" Content="Contact:" HorizontalAlignment="Left" Margin="34,266,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <TextBox x:Name="Txt_Contact" HorizontalAlignment="Left" Margin="109,268,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="159" IsReadOnly="True" Height="25"/>
+
+
+            </Grid>
+
+
+        </DockPanel>
+        <Grid Grid.Column="5" Grid.Row="5" Width="600" Height="480" Background="#FFF1F1F1" Margin="0,50,0,0">
+            <DockPanel LastChildFill="False" Width="600" Height="100" HorizontalAlignment="Center" VerticalAlignment="Top" Background="AliceBlue">
+                <Button x:Name="Btn_Test" Content="Tests" Width="150" Height="25" Background="#FF5996F9" Margin="35,0,0,0" FontWeight="Bold"/>
+                <Button x:Name="Btn_XRay" Content="XRay" Width="150" Height="25" Background="#FF5996F9" Margin="35,0,0,0" FontWeight="Bold"/>
+                <Button x:Name="Btn_Medices" Content="Medicen" Width="150" Height="25" Background="#FF5996F9" Margin="35,0,0,0" FontWeight="Bold"/>
+
+            </DockPanel>
+            <ListBox x:Name="List_Test" Width="170" Height="300" Margin="26,154,404,26"/>
+            <ListBox x:Name="List_XRay" Width="170" Height="300" Margin="219,154,211,26"/>
+            <ListBox x:Name="List_Medicen" Width="170" Height="300" Margin="406,154,24,26"/>
+            <Label x:Name="label7" Content="Tests" HorizontalAlignment="Left" Margin="28,118,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+            <Label x:Name="label8" Content="XRays" HorizontalAlignment="Left" Margin="227,118,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+            <Label x:Name="label9" Content="Medicens" HorizontalAlignment="Left" Margin="412,118,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        </Grid>
+        <Button x:Name="Btn_Logout" Content="Logout" Grid.Column="5" HorizontalAlignment="Left" Margin="482,12,0,0" Grid.Row="5" VerticalAlignment="Top" Background="#FFFB0000" FontSize="14" FontWeight="Bold" Width="150" Height="25" Click="Btn_Logout_Click"/>
+        <!--<DockPanel Grid.Column="5" LastChildFill="False" Grid.Row="5" Background="#FFF1F1F1" Width="600" Height="480" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,50,0,0">
+
+
+        </DockPanel>-->
+
+
+
+
+    </Grid>
+</Window>

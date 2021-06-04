@@ -21,11 +21,11 @@
 
             <Grid Background="#FFFFFEFE" Margin="9,9,11,14"  >
 
-                <TextBox x:Name="txt_UserName" HorizontalAlignment="Left"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="236" Height="30" FontSize="14" FontFamily="Arial Rounded MT Bold" Background="#FFFCFCFC" BorderBrush="#FF0A0A0A" Margin="26,66,0,0"  />
+                <TextBox x:Name="txt_UserName" HorizontalAlignment="Left"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="236" Height="30" FontSize="14" FontFamily="Arial Rounded MT Bold" Background="#FFFCFCFC" BorderBrush="#FF0A0A0A" Margin="26,66,0,0" ClipToBounds="True" TextChanged="txt_UserName_TextChanged" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center"  />
                 <Label x:Name="label2" Content="User Name:" HorizontalAlignment="Left" Margin="26,33,0,0" VerticalAlignment="Top" FontSize="12" FontWeight="Normal" FontFamily="Arial Rounded MT Bold"/>
                 <Label x:Name="label2_Copy" Content="Password:&#xD;&#xA;" HorizontalAlignment="Left" Margin="30,120,0,0" VerticalAlignment="Top" FontSize="12" FontWeight="Normal" FontFamily="Arial Rounded MT Bold"/>
-                <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="26,163,0,0" VerticalAlignment="Top" Width="236" Height="32" Background="#FFFCFCFC" BorderBrush="Black"/>
-                <Button x:Name="Btn_Login" Content="Login" HorizontalAlignment="Left" Margin="45,234,0,0" VerticalAlignment="Top" Width="201" Height="38" FontFamily="Arial Rounded MT Bold" FontSize="14" FontWeight="Bold" Background="#FF0AB2B2" BorderBrush="#FFC5E45D" Foreground="White">
+                <PasswordBox x:Name="Txt_Password" HorizontalAlignment="Left" Margin="26,163,0,0" VerticalAlignment="Top" Width="236" Height="32" Background="#FFFCFCFC" BorderBrush="Black" ClipToBounds="True" SnapsToDevicePixels="True" VerticalContentAlignment="Center"/>
+                <Button x:Name="Btn_Login" Content="Login" HorizontalAlignment="Left" Margin="45,234,0,0" VerticalAlignment="Top" Width="201" Height="38" FontFamily="Arial Rounded MT Bold" FontSize="14" FontWeight="Bold" Background="#FF0AB2B2" BorderBrush="#FFC5E45D" Foreground="White" Click="Btn_Login_Click">
                     <Button.FocusVisualStyle>
                         <Style/>
                     </Button.FocusVisualStyle>
