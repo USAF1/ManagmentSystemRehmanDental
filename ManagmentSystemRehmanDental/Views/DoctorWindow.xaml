@@ -51,8 +51,8 @@
         </DockPanel>
         <Grid Grid.Column="5" Grid.Row="5" Width="600" Height="480" Background="#FFF1F1F1" Margin="0,50,0,0">
             <DockPanel LastChildFill="False" Width="600" Height="100" HorizontalAlignment="Center" VerticalAlignment="Top" Background="AliceBlue">
-                <Button x:Name="Btn_Test" Content="Tests" Width="150" Height="25" Background="#FF5996F9" Margin="35,0,0,0" FontWeight="Bold"/>
-                <Button x:Name="Btn_XRay" Content="XRay" Width="150" Height="25" Background="#FF5996F9" Margin="35,0,0,0" FontWeight="Bold"/>
+                <Button x:Name="Btn_Test" Content="Tests" Width="150" Height="25" Background="#FF5996F9" Margin="35,0,0,0" FontWeight="Bold" Click="Btn_Test_Click"/>
+                <Button x:Name="Btn_XRay" Content="XRay" Width="150" Height="25" Background="#FF5996F9" Margin="35,0,0,0" FontWeight="Bold" Click="Btn_XRay_Click"/>
                 <Button x:Name="Btn_Medices" Content="Medicen" Width="150" Height="25" Background="#FF5996F9" Margin="35,0,0,0" FontWeight="Bold"/>
 
             </DockPanel>

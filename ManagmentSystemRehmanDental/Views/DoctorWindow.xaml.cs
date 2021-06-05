@@ -69,6 +69,7 @@ namespace ManagmentSystemRehmanDental.Views
         public void AddItemsToTestList()
         {
             List_Test.Items.Clear();
+            List_XRay.Items.Clear();
 
             Patient patient = new Patient();
             if (GetUserInfo.Id > 0)
@@ -90,6 +91,19 @@ namespace ManagmentSystemRehmanDental.Views
                 {
                     List_Test.Items.Add("No Tests Assign");
                 }
+
+                if (patient.XRays.Count > 0)
+                {
+                    foreach (var xray in patient.XRays)
+                    {
+
+                        List_XRay.Items.Add(xray.Name);
+                    }
+                }
+                else
+                {
+                    List_XRay.Items.Add("No Tests Assign");
+                }
             }
 
 
@@ -102,6 +116,36 @@ namespace ManagmentSystemRehmanDental.Views
             Login window = new Login();
             window.Show();
             this.Close();
+        }
+
+        private void Btn_Test_Click(object sender, RoutedEventArgs e)
+        {
+            PatientModel model = PatientHandler.GetPatient(GetUserInfo.Id).ToModel();
+
+            if (model != null)
+            {
+                DocTestsWindow tw = new DocTestsWindow();
+                tw.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please Search A Patient");
+            }
+        }
+
+        private void Btn_XRay_Click(object sender, RoutedEventArgs e)
+        {
+            PatientModel model = PatientHandler.GetPatient(GetUserInfo.Id).ToModel();
+
+            if (model != null)
+            {
+                DocXRayWindow tw = new DocXRayWindow();
+                tw.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please Search A Patient");
+            }
         }
     }
 }

@@ -24,7 +24,7 @@ namespace EntityLibrary.PatientManagment
         {
             using (ApplicationDb context = new ApplicationDb())
             {
-                return (from Patient in context.Patients.Include(t => t.Tests) where Patient.Id == id select Patient).FirstOrDefault();
+                return (from Patient in context.Patients.Include(t => t.Tests).Include(z=>z.XRays) where Patient.Id == id select Patient).FirstOrDefault();
             }
         }
 

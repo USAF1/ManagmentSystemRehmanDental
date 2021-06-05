@@ -19,5 +19,7 @@ namespace ManagmentSystemRehmanDental.Models
         public long Contact { get; set; }
 
         public List<TestModel> Tests { get; set; }
+
+        public virtual List<XRayModel> XRays { get; set; }
     }
 }
