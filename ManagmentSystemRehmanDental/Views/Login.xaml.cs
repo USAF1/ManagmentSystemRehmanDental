@@ -56,6 +56,18 @@ namespace ManagmentSystemRehmanDental.Views
                         window.Show();
                         this.Close();
                     }
+                    else if (user.Role.Name == "Lab")
+                    {
+                        LabWindow window = new LabWindow();
+                        window.Show();
+                        this.Close();
+                    }
+                    else if (user.Role.Name == "Radiology")
+                    {
+                        RadiologyWindow window = new RadiologyWindow();
+                        window.Show();
+                        this.Close();
+                    }
                 }
                 else
                 {

@@ -93,6 +93,7 @@ namespace EntityLibrary.PatientManagment
                     }
                 }
                 pt.Tests.Clear();
+                pt.XRays.Clear();
                 context.Update(pt);
                 context.SaveChanges();
             }

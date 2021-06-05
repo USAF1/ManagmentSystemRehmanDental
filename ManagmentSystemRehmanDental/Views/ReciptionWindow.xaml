@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ManagmentSystemRehmanDental.Views"
         mc:Ignorable="d"
-        Title="ReciptionWindow" Height="600" Width="400" ResizeMode="NoResize">
+        Title="ReciptionWindow" Height="600" Width="400" WindowStartupLocation="CenterScreen"  ResizeMode="NoResize">
     <Grid Background="#FFF1F1F1">
         <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="0,47,0,0" Text="Welcome To Reciption Desk" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" FontFamily="Arial Rounded MT Bold"/>
         <Border BorderBrush="#FFB2B2B2" BorderThickness="1,1,1,1" CornerRadius="10,10,10,10" Margin="45,83,45,41" Width="310" Height="460" Background="White">
