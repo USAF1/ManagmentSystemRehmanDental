@@ -28,7 +28,7 @@ namespace ManagmentSystemRehmanDental.Views
 
         private void Btn_Search_Click(object sender, RoutedEventArgs e)
         {
-            List_XRay.Items.Clear();
+            List_Test.Items.Clear();
             if (!(string.IsNullOrWhiteSpace(Txt_Search.Text)) && Txt_Search.Text != "")
             {
                 Patient patient = PatientHandler.GetPatient(Convert.ToInt32(Txt_Search.Text));
